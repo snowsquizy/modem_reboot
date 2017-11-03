@@ -1,7 +1,7 @@
-#!/usr/bin/env python  
+#!/usr/bin/env python3  
 ########################################################
 # Confirm internet connection.  If internet is down reboot adsl modem
-# Andrew Taylor @ 2016# Version 0.1
+# Andrew Taylor @ 2016# Version 0.2
 ######################################################## 
 
 ########################################################
@@ -39,7 +39,7 @@ out, error = ping.communicate()
 
 ########################################################
 # Connect to ADSL Modem and Reboot
-if re.search(noconnection,out,flags=0):        
+if re.search(noconnection,str(out),flags=0):        
   # Create SSH Connection        
   client = paramiko.SSHClient()        
   # Load System Host Keys         
